@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordados Wanka S.A.C.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <header class="cabecera">
+            <h1>Bordados Wanka S.A.C.</h1>
+            <p class="lema">Bordados personalizados y diseños textiles listos</p>
+        </header>
+
+        <!-- Pestañas -->
+        <nav class="pestanas" role="tablist" aria-label="Secciones del sitio">
+            <button class="pestana activa" role="tab" data-destino="inicio" aria-selected="true">Inicio</button>
+            <button class="pestana" role="tab" data-destino="imagenes" aria-selected="false">Imagenes Vive IC</button>
+            <button class="pestana" role="tab" data-destino="repositorio" aria-selected="false">Repositorio</button>
+        </nav>
+
+        <!-- ===== PESTAÑA 1: INICIO ===== -->
+        <section id="inicio" class="panel activo" role="tabpanel">
+
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                Bordados Wanka S.A.C. es una empresa dedicada a la fabricación y comercialización
+                de todo tipo de bordados personalizados y diseños textiles listos, para clientes
+                particulares, empresas, instituciones educativas y organizaciones. Atendemos
+                pedidos al por mayor y al por menor, en pequeñas y grandes cantidades.
+            </p>
+
+            <button id="miBoton">Ver misión y visión</button>
+
+            <div id="mensaje" class="oculto">
+                <p><strong>Misión:</strong> brindar servicios de bordado personalizado y diseños textiles
+                    listos de alta calidad, con productos duraderos y bien hechos, trabajando con
+                    compromiso y responsabilidad para garantizar la satisfacción de nuestros clientes.</p>
+                <p><strong>Visión:</strong> ser una empresa grande y reconocida a nivel nacional e
+                    internacional en bordados personalizados y diseños textiles, destacando por
+                    creatividad, calidad y puntualidad en el servicio al cliente.</p>
+            </div>
+
+            <div class="datos">
+                <div class="dato">
+                    <span class="dato-titulo">📍 Dirección</span>
+                    <span>Av. Ferrocarril e Ica, Galería La Casona, Stand 240 – Huancayo, Perú</span>
+                </div>
+                <div class="dato">
+                    <span class="dato-titulo">🎵 TikTok</span>
+                    <a href="https://www.tiktok.com/@bordadoswanka" target="_blank" rel="noopener noreferrer">@bordadoswanka</a>
+                </div>
+            </div>
+
+            <h2>Nuestros productos</h2>
+            <p class="nota">Ejemplos tomados del prototipo de la tienda en línea. Precios referenciales.</p>
+
+            <!-- Las tarjetas se generan desde script.js (arreglo "productos") -->
+            <div id="listaProductos" class="grilla-productos"></div>
+
+            <p class="nota nota-caja">
+                Máximo 5 unidades por producto en la tienda en línea. Para pedidos mayores,
+                consulta nuestra sección de venta por mayor.
+            </p>
+        </section>
+
+        <!-- ===== PESTAÑA 2: IMÁGENES ===== -->
+        <section id="imagenes" class="panel" role="tabpanel" hidden>
+            <h2>Imagenes Vive IC</h2>
+            <p>Aquí se colocarán las fotos.</p>
+
+            <div class="galeria">
+                <!-- Para agregar una foto, reemplaza un recuadro por:
+                     <figure><img src="imagenes/foto1.jpg" alt="Descripción"><figcaption>Título</figcaption></figure> -->
+                <div class="foto-vacia">Foto 1</div>
+                <div class="foto-vacia">Foto 2</div>
+                <div class="foto-vacia">Foto 3</div>
+                <div class="foto-vacia">Foto 4</div>
+                <div class="foto-vacia">Foto 5</div>
+                <div class="foto-vacia">Foto 6</div>
+            </div>
+        </section>
+
+        <!-- ===== PESTAÑA 3: REPOSITORIO ===== -->
+        <section id="repositorio" class="panel" role="tabpanel" hidden>
+            <h2>Repositorio</h2>
+            <p>Código fuente y archivos del proyecto:</p>
+
+            <!-- El enlace se define en script.js (constante URL_REPOSITORIO) -->
+            <a id="enlaceRepo" class="boton-enlace" href="#" target="_blank" rel="noopener noreferrer">
+                Ir al repositorio
+            </a>
+            <p id="avisoRepo" class="nota"></p>
+        </section>
+
+        <footer class="pie">© 2026 Bordados Wanka S.A.C. · RUC 20615339386</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

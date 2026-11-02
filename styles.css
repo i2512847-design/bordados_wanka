@@ -1,0 +1,273 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px 12px;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    color: #333333;
+    margin: 0 0 4px;
+}
+
+h2 {
+    color: #333333;
+    margin: 28px 0 10px;
+}
+
+p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+.lema {
+    margin: 0;
+}
+
+/*Botones*/
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*Pestañas*/
+.pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 22px 0 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e3e6ea;
+}
+
+.pestana {
+    background-color: #e9ecef;
+    color: #444444;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.pestana:hover {
+    background-color: #d6dade;
+}
+
+.pestana.activa {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.panel[hidden] {
+    display: none;
+}
+
+/*Mensaje oculto*/
+.oculto {
+    display: none;
+    color: #28a745 !important;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.oculto p {
+    color: #28a745;
+}
+
+/*Datos de contacto*/
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.dato {
+    flex: 1 1 260px;
+    background-color: #f7f9fb;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #555555;
+}
+
+.dato-titulo {
+    font-weight: bold;
+    color: #333333;
+}
+
+a {
+    color: #007bff;
+}
+
+/*Productos*/
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    text-align: left;
+}
+
+.tarjeta {
+    border: 1px solid #e3e6ea;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.tarjeta-img {
+    height: 120px;
+    background-color: #eceff1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+}
+
+.tarjeta-cuerpo {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.categoria {
+    font-size: 12px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+.tarjeta h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #333333;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 6px;
+}
+
+.nota {
+    font-size: 14px;
+}
+
+.nota-caja {
+    background-color: #f7f9fb;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*Galería*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.galeria figure {
+    margin: 0;
+}
+
+.galeria img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.galeria figcaption {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 6px;
+}
+
+.foto-vacia {
+    height: 180px;
+    border: 2px dashed #c5cbd1;
+    border-radius: 8px;
+    background-color: #f7f9fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+}
+
+/*Repositorio*/
+.boton-enlace {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enlace:hover {
+    background-color: #0056b3;
+}
+
+/*Pie*/
+.pie {
+    margin-top: 32px;
+    padding-top: 14px;
+    border-top: 1px solid #e6e3ea;
+    font-size: 13px;
+    color: #888888;
+}
