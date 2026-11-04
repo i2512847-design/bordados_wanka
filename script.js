@@ -1,28 +1,28 @@
-// Pega aquí el enlace de tu repositorio.
-const URL_REPOSITORIO = '';
+/* Configuración */
+const URL_REPOSITORIO = 'https://github.com/i2521955-boop/bordado-1wanka';
 
 const productos = [
     { nombre: 'Pollera Andina Floral',     categoria: 'Pollera', precio: 120, etiqueta: 'Entrega inmediata',
-      descripcion: 'Pollera bordada a mano con hilos de colores vivos sobre tela de lana. Motivos florales andinos tradicionales de la región Junín.', imagen: '' },
+      descripcion: 'Pollera bordada a mano con hilos de colores vivos sobre tela de lana. Motivos florales andinos tradicionales de la región Junín.', imagen: 'imagenes/pollera_andina_floral.jpg' },
     { nombre: 'Pollera Huanca Multicolor', categoria: 'Pollera', precio: 180, etiqueta: 'Entrega inmediata',
-      descripcion: 'Pollera de estilo huanca con bordados multicolor, ideal para festividades y danzas folclóricas.', imagen: '' },
+      descripcion: 'Pollera de estilo huanca con bordados multicolor, ideal para festividades y danzas folclóricas.', imagen: 'imagenes/pollera_huanca_multicolor.jpg' },
     { nombre: 'Pollera Ceremonial Puno',   categoria: 'Pollera', precio: 220, etiqueta: 'Entrega inmediata',
-      descripcion: 'Pollera de gala con bordado detallado, pensada para ceremonias y presentaciones especiales.', imagen: '' },
+      descripcion: 'Pollera de gala con bordado detallado, pensada para ceremonias y presentaciones especiales.', imagen: 'imagenes/pollera_ceremonial_puno.jpg' },
     { nombre: 'Faja Tradicional Junín',    categoria: 'Faja',    precio: 35,  etiqueta: 'Entrega inmediata',
-      descripcion: 'Faja tradicional con motivos típicos de Junín, resistente y cómoda para uso diario o de danza.', imagen: '' },
+      descripcion: 'Faja tradicional con motivos típicos de Junín, resistente y cómoda para uso diario o de danza.', imagen: 'imagenes/faja_tradicional_junin.jpg' },
     { nombre: 'Faja Bordada Cóndor',       categoria: 'Faja',    precio: 45,  etiqueta: 'Entrega inmediata',
-      descripcion: 'Faja con bordado del cóndor andino, símbolo de la cultura de los Andes.', imagen: '' },
+      descripcion: 'Faja con bordado del cóndor andino, símbolo de la cultura de los Andes.', imagen: 'imagenes/faja_bordada_condor.jpg' },
     { nombre: 'Faja Wanka Personalizada',  categoria: 'Faja',    precio: 50,  etiqueta: 'Personalizado',
-      descripcion: 'Faja bordada a pedido: eliges colores, nombre o diseño para tu grupo o institución.', imagen: '' },
+      descripcion: 'Faja bordada a pedido: eliges colores, nombre o diseño para tu grupo o institución.', imagen: 'imagenes/faja_wanka_personalizada.jpg' },
     { nombre: 'Chaleco Folklórico Bordado',categoria: 'Chaleco', precio: 80,  etiqueta: 'Personalizado',
-      descripcion: 'Chaleco con bordados folklóricos que puedes personalizar con tus propios diseños.', imagen: '' },
+      descripcion: 'Chaleco con bordados folklóricos que puedes personalizar con tus propios diseños.', imagen: 'imagenes/chaleco_folklorico_personalizado.jpg' },
     { nombre: 'Chaleco Andino Premium',    categoria: 'Chaleco', precio: 95,  etiqueta: 'Personalizado',
-      descripcion: 'Chaleco de acabado premium con bordado andino de alta calidad.', imagen: '' },
+      descripcion: 'Chaleco de acabado premium con bordado andino de alta calidad.', imagen: 'imagenes/chaleco_andino_premium.png' },
     { nombre: 'Chaleco Infantil Bordado',  categoria: 'Chaleco', precio: 60,  etiqueta: 'Entrega inmediata',
-      descripcion: 'Chaleco bordado en tallas para niños, perfecto para actos escolares y danzas.', imagen: '' }
+      descripcion: 'Chaleco bordado en tallas para niños, perfecto para actos escolares y danzas.', imagen: 'imagenes/chaleco_infantil_bordado.jpg' }
 ];
 
-/*MISIÓN Y VISIÓN*/
+/* Misión y visión */
 const boton = document.getElementById('miBoton');
 const mensaje = document.getElementById('mensaje');
 
@@ -36,7 +36,7 @@ boton.addEventListener('click', () => {
     }
 });
 
-/*PRODUCTOS*/
+/* Productos */
 const contenedorProductos = document.getElementById('listaProductos');
 
 function crearTarjeta(p) {
@@ -80,7 +80,7 @@ function crearTarjeta(p) {
 
 productos.forEach(p => contenedorProductos.appendChild(crearTarjeta(p)));
 
-/*PESTAÑAS*/
+/* Pestañas */
 const pestanas = document.querySelectorAll('.pestana');
 const paneles = document.querySelectorAll('.panel');
 
@@ -101,7 +101,7 @@ pestanas.forEach(pestana => {
     });
 });
 
-/*REPOSITORIO */
+/* Repositorio */
 const enlaceRepo = document.getElementById('enlaceRepo');
 const avisoRepo = document.getElementById('avisoRepo');
 

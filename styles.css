@@ -1,6 +1,19 @@
+/* Colores */
+:root {
+    --rojo:        #a61e22;
+    --rojo-oscuro: #7a1317;
+    --dorado:      #c9a227;
+    --dorado-claro:#f1e2a8;
+    --crema:       #fbf3e2;
+    --crema-2:     #f4e8cc;
+    --blanco:      #ffffff;
+    --texto:       #4a3328;
+    --texto-suave: #7a6354;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--crema);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -11,38 +24,51 @@ body {
 }
 
 .contenedor {
-    background-color: #ffffff;
+    background-color: var(--blanco);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid var(--rojo);
+    box-shadow: 0 4px 15px rgba(122, 19, 23, 0.15);
     text-align: center;
     width: 100%;
     max-width: 900px;
 }
 
 h1 {
-    color: #333333;
+    color: var(--rojo);
     margin: 0 0 4px;
 }
 
 h2 {
-    color: #333333;
+    color: var(--rojo);
     margin: 28px 0 10px;
 }
 
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--dorado);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
 p {
-    color: #666666;
+    color: var(--texto-suave);
     line-height: 1.6;
 }
 
 .lema {
     margin: 0;
+    color: var(--dorado);
+    font-weight: 600;
 }
 
-/*Botones*/
+/* Botones */
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--rojo);
+    color: var(--blanco);
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -52,10 +78,10 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--rojo-oscuro);
 }
 
-/*Pestañas*/
+/* Pestañas */
 .pestanas {
     display: flex;
     flex-wrap: wrap;
@@ -63,42 +89,45 @@ button:hover {
     gap: 8px;
     margin: 22px 0 8px;
     padding-bottom: 14px;
-    border-bottom: 1px solid #e3e6ea;
+    border-bottom: 2px solid var(--dorado);
 }
 
 .pestana {
-    background-color: #e9ecef;
-    color: #444444;
+    background-color: var(--crema-2);
+    color: var(--texto);
     padding: 10px 20px;
     font-size: 15px;
 }
 
 .pestana:hover {
-    background-color: #d6dade;
+    background-color: var(--dorado-claro);
 }
 
 .pestana.activa {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--rojo);
+    color: var(--blanco);
 }
 
 .panel[hidden] {
     display: none;
 }
 
-/*Mensaje oculto*/
+/* Mensaje oculto (misión y visión) */
 .oculto {
     display: none;
-    color: #28a745 !important;
-    font-weight: bold;
     margin-top: 20px;
+    padding: 6px 16px;
+    background-color: var(--crema);
+    border-left: 4px solid var(--dorado);
+    border-radius: 6px;
+    text-align: left;
 }
 
 .oculto p {
-    color: #28a745;
+    color: var(--texto);
 }
 
-/*Datos de contacto*/
+/* Datos de contacto */
 .datos {
     display: flex;
     flex-wrap: wrap;
@@ -109,26 +138,31 @@ button:hover {
 
 .dato {
     flex: 1 1 260px;
-    background-color: #f7f9fb;
-    border: 1px solid #e3e6ea;
+    background-color: var(--crema);
+    border: 1px solid var(--dorado);
     border-radius: 8px;
     padding: 14px;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    color: #555555;
+    color: var(--texto);
 }
 
 .dato-titulo {
     font-weight: bold;
-    color: #333333;
+    color: var(--rojo);
 }
 
 a {
-    color: #007bff;
+    color: var(--rojo);
+    font-weight: 600;
 }
 
-/*Productos*/
+a:hover {
+    color: var(--rojo-oscuro);
+}
+
+/* Productos */
 .grilla-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -137,30 +171,38 @@ a {
 }
 
 .tarjeta {
-    border: 1px solid #e3e6ea;
+    border: 1px solid var(--crema-2);
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 8px rgba(122, 19, 23, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(122, 19, 23, 0.18);
 }
 
 .tarjeta-img {
-    height: 120px;
-    background-color: #eceff1;
+    height: 230px;
+    background-color: var(--crema-2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
     position: relative;
+    border-bottom: 3px solid var(--dorado);
 }
 
 .etiqueta {
     position: absolute;
     top: 8px;
     left: 8px;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: var(--rojo);
+    color: var(--blanco);
     font-size: 11px;
     padding: 3px 8px;
     border-radius: 4px;
@@ -177,14 +219,16 @@ a {
 
 .categoria {
     font-size: 12px;
-    color: #888888;
+    color: var(--dorado);
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .tarjeta h3 {
     margin: 0;
     font-size: 17px;
-    color: #333333;
+    color: var(--texto);
 }
 
 .tarjeta p {
@@ -194,9 +238,9 @@ a {
 }
 
 .precio {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #333333;
+    color: var(--rojo);
     margin-top: 6px;
 }
 
@@ -205,54 +249,63 @@ a {
 }
 
 .nota-caja {
-    background-color: #f7f9fb;
-    border: 1px solid #e3e6ea;
+    background-color: var(--crema);
+    border: 1px solid var(--dorado);
     border-radius: 8px;
     padding: 10px;
     margin-top: 20px;
 }
 
-/*Galería*/
+/* Galería */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 14px;
     margin-top: 16px;
 }
 
 .galeria figure {
     margin: 0;
+    background-color: var(--crema);
+    border: 1px solid var(--dorado);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.galeria a {
+    display: block;
 }
 
 .galeria img {
     width: 100%;
-    height: 180px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 8px;
+    display: block;
 }
 
 .galeria figcaption {
     font-size: 14px;
-    color: #666666;
-    margin-top: 6px;
+    color: var(--texto);
+    font-weight: 600;
+    padding: 8px;
 }
 
 .foto-vacia {
     height: 180px;
-    border: 2px dashed #c5cbd1;
+    border: 2px dashed var(--dorado);
     border-radius: 8px;
-    background-color: #f7f9fb;
+    background-color: var(--crema);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #999999;
+    color: var(--texto-suave);
 }
 
-/*Repositorio*/
+/* Repositorio */
 .boton-enlace {
     display: inline-block;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--rojo);
+    color: var(--blanco);
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 6px;
@@ -260,14 +313,15 @@ a {
 }
 
 .boton-enlace:hover {
-    background-color: #0056b3;
+    background-color: var(--rojo-oscuro);
+    color: var(--blanco);
 }
 
-/*Pie*/
+/* Pie */
 .pie {
     margin-top: 32px;
     padding-top: 14px;
-    border-top: 1px solid #e6e3ea;
+    border-top: 2px solid var(--dorado);
     font-size: 13px;
-    color: #888888;
+    color: var(--texto-suave);
 }
